@@ -18,8 +18,8 @@ select * from products
 ORDER BY price DESC;
 
 -- find all employees who don't have a middle initial
-select * from products
-where middleinitial is null;
+select * from employees
+where MiddleInitial is null;
 
 -- find distinct product prices
 select DISTINCT(price) from products;
@@ -40,10 +40,10 @@ select AVG(price) from products;
 
 -- find all Geek Squad employees who don't have a middle initial
 select * from employees
-where Title Like '&Geek Squad%' AND MiddleInitial is NULL;
+where Title Like '%Geek Squad%' AND MiddleInitial is NULL;
 
 -- find all products from the products table whose stock level is in the range 
 -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
 select * from products
-where stcoklevel between 500 and 1200
+where stocklevel between 500 and 1200
 ORDER BY Price ASC;
